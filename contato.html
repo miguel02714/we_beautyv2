@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - Salão de Beleza</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif;
+      background: url("Tela fundo 1.png") center/cover no-repeat fixed;
+      overflow-x: hidden;
+    }
+
+    /* animações */
+    @keyframes fadeInDown {
+      0%   { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0%   { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 8px 0;              /* altura reduzida */
+      animation: fadeInDown 0.6s ease-out;
+      z-index: 10;
+    }
+    .nav a {
+      position: relative;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;             /* fonte menor */
+      font-weight: bold;
+      padding: 0 12px;
+      transition: color .3s;
+    }
+    /* linhas separadoras entre links */
+    .nav a + a:before {
+      content: "";
+      position: absolute;
+      left: 0; top: 4px; bottom: 4px;
+      width: 1px;
+      background: rgba(255,255,255,0.5);
+    }
+    .nav a:hover {
+      color: #d09d4e;
+    }
+
+    .contato {
+      margin-top: 80px;
+      text-align: center;
+      font-size: 2.8rem;
+      color: #fff;
+      animation: fadeInUp 0.8s ease-out;
+      padding: 0 10px;
+    }
+
+    .contatos1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+      animation: fadeInUp 1s ease-out;
+    }
+    .contatoz {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(0,0,0,0.4);
+      padding: 20px 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 440px;
+      backdrop-filter: blur(4px);
+    }
+
+    .contatoz img {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+    }
+
+    .contatoz button {
+      flex-grow: 1;
+      padding: 14px 0;
+      background: #97693b;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      transition: background .3s, transform .2s;
+      cursor: pointer;
+    }
+    .contatoz button:hover {
+      background: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        gap: 15px;
+      }
+      .nav a {
+        font-size: 16px;
+        padding: 0 8px;
+      }
+      .contato {
+        font-size: 2.2rem;
+        margin-top: 70px;
+      }
+      .contatoz {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 20px;
+      }
+      .contatoz img {
+        width: 50px;
+        height: 50px;
+      }
+      .contatoz button {
+        font-size: 1rem;
+        padding: 16px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#">CONTATO</a>
+    <a href="#">ENDEREÇO</a>
+    <a href="#">SOBRE NÓS</a>
+    <a href="#">SERVIÇOS</a>
+  </nav>
+
+  <h1 class="contato">CONTATO</h1>
+
+  <div class="contatos1">
+    <div class="contatoz">
+      <img src="R__3_-removebg-preview (1).png" alt="WhatsApp">
+      <button onclick="location.href='https://wa.me/message/NZR6RKHBHBVEB1'">
+        ENTRAR EM CONTATO
+      </button>
+    </div>
+    <div class="contatoz">
+      <img src="criativo-6594670e4b7e9MDIvMDEvMjAyNCAxNmg0Mg__-removebg-preview (1).png" class="email" alt="Email">
+      <button onclick="location.href='https://www.instagram.com/weandbeauty_uk/'">
+        ENTRAR EM CONTATO
+      </button>
+    </div>
+  </div>
+</body>
+</html>
