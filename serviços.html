@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serviços</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('Tela fundo 1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 25px;
+      padding: 20px 40px;
+      font-size: 20px;
+      font-weight: 600;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 12px 12px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #d09d4e;
+      transform: scale(1.05);
+    }
+
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .servico {
+      background-color: rgba(0, 0, 0, 0.55);
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .servico:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    }
+
+    .servico img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .servico h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #f4f4f4;
+    }
+
+    .servico p {
+      font-size: 16px;
+      color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        justify-content: center;
+        font-size: 18px;
+        padding: 15px;
+        flex-wrap: wrap;
+      }
+
+      .servicos {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+      }
+
+      .servico {
+        padding: 25px 15px;
+      }
+
+      .servico img {
+        width: 65px;
+      }
+
+      .servico h3 {
+        font-size: 20px;
+      }
+
+      .servico p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#">CONTATO</a>
+    <a href="#">ENDEREÇO</a>
+    <a href="#">SOBRE</a>
+    <a href="#">SERVIÇOS</a>
+  </nav>
+
+  <div class="servicos">
+    <div class="servico">
+      <img src="cabelo.png" alt="Ícone de corte feminino">
+      <h3>Corte Feminino</h3>
+      <p>Estilos modernos e clássicos para realçar sua beleza.</p>
+    </div>
+
+    <div class="servico">
+      <img src="nail.png" alt="Ícone de unhas e design">
+      <h3>Unhas e Design</h3>
+      <p>Manicure, pedicure e arte para unhas impecáveis.</p>
+    </div>
+
+    <div class="servico">
+      <img src="imagens/massagem.png" alt="Ícone de massagem relaxante">
+      <h3>Massagem Relaxante</h3>
+      <p>Técnicas para aliviar o estresse e revitalizar o corpo.</p>
+    </div>
+
+    <div class="servico">
+      <img src="makeup_10368594.png" alt="Ícone de maquiagem profissional">
+      <h3>Maquiagem Profissional</h3>
+      <p>Looks para todas as ocasiões e eventos especiais.</p>
+    </div>
+  </div>
+</body>
+</html>
